@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\UnrealProjects\\Unreal_KimsFarm\\UrrFarm\\Source\\UrrFarm\\UrrFarm.Build.cs",
+		"C:\\UnrealProjects\\Unreal_KimsFarm\\UrrFarm\\Source\\UrrFarm.Target.cs",
+		"C:\\UnrealProjects\\Unreal_KimsFarm\\UrrFarm\\Source\\UrrFarmEditor.Target.cs"
+	],
+	"EngineVersion": "5.3.2"
+}

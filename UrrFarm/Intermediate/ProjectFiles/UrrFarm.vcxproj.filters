@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\UrrFarm.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\UrrFarm.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\UrrFarmEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\UrrFarm">
+      <UniqueIdentifier>{B90E9314-5CD0-3AD0-BFFC-6AB3699FA6F3}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\UrrFarm\UrrFarm.Build.cs">
+      <Filter>Source\UrrFarm</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\UrrFarm\UrrFarm.cpp">
+      <Filter>Source\UrrFarm</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UrrFarm\UrrFarm.h">
+      <Filter>Source\UrrFarm</Filter>
+    </ClInclude>
+    <Filter Include="Source\UrrFarm\Private">
+      <UniqueIdentifier>{C8775DC2-2B82-3EC9-ADC6-0679A27E54D1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\UrrFarm\Private\Animation">
+      <UniqueIdentifier>{ED8078BF-02DA-34D9-B820-FFDBFFD48F45}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\UrrFarm\Private\Animation\MainCharacterAnimInstance.cpp">
+      <Filter>Source\UrrFarm\Private\Animation</Filter>
+    </ClCompile>
+    <Filter Include="Source\UrrFarm\Private\Character">
+      <UniqueIdentifier>{533D43B0-7E5D-30A4-A3D4-1E87ACC66C39}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\UrrFarm\Private\Character\MainCharacter.cpp">
+      <Filter>Source\UrrFarm\Private\Character</Filter>
+    </ClCompile>
+    <Filter Include="Source\UrrFarm\Private\Controller">
+      <UniqueIdentifier>{1F465C08-D645-3A0A-885D-CB72EA90E3D7}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\UrrFarm\Private\Controller\MainGameController.cpp">
+      <Filter>Source\UrrFarm\Private\Controller</Filter>
+    </ClCompile>
+    <Filter Include="Source\UrrFarm\Public">
+      <UniqueIdentifier>{14B65E14-B5E7-3823-8D8E-337313490C15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\UrrFarm\Public\Animation">
+      <UniqueIdentifier>{5C7267DE-B95A-30B0-BA92-4B164DD367E4}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\UrrFarm\Public\Animation\MainCharacterAnimInstance.h">
+      <Filter>Source\UrrFarm\Public\Animation</Filter>
+    </ClInclude>
+    <Filter Include="Source\UrrFarm\Public\Character">
+      <UniqueIdentifier>{BABD46DB-E779-3FD7-9D80-E456B141CFA9}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\UrrFarm\Public\Character\MainCharacter.h">
+      <Filter>Source\UrrFarm\Public\Character</Filter>
+    </ClInclude>
+    <Filter Include="Source\UrrFarm\Public\Controller">
+      <UniqueIdentifier>{028C2C1F-5637-3414-A854-C69D91B05B75}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\UrrFarm\Public\Controller\MainGameController.h">
+      <Filter>Source\UrrFarm\Public\Controller</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
