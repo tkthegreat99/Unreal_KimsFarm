@@ -12,7 +12,6 @@
 #include "EnhancedInputSubsystems.h"
 #include "Engine/LocalPlayer.h"
 #include "Character/MainCharacter.h"
-#include "GameFramework/SpringArmComponent.h"
 
 AMainGameController::AMainGameController()
 {
@@ -22,23 +21,6 @@ AMainGameController::AMainGameController()
 	FollowTime = 0.f;
 	ShortPressThreshold = 0.3f;
 	MainCharacter = Cast<AMainCharacter>(GetPawn());
-	PrimaryActorTick.bCanEverTick = true;
-	ExpectedSpringArmLength = 800.f;
-}
-
-void AMainGameController::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-	if (MainCharacter && CameraBoom)
-	{
-		if (FMath::Abs(CameraBoom->TargetArmLength - ExpectedSpringArmLength) > KINDA_SMALL_NUMBER) { CameraBoom->TargetArmLength = FMath::Lerp(CameraBoom->TargetArmLength, ExpectedSpringArmLength, 0.05f); }
-	}
-
-	else 
-	{
-		return;
-	}
-	
 }
 
 void AMainGameController::BeginPlay()
@@ -50,10 +32,7 @@ void AMainGameController::BeginPlay()
 	{
 		Subsystem->AddMappingContext(DefaultMappingContext, 0);
 	}
-	if (MainCharacter)
-	{
-		CameraBoom = MainCharacter->GetCameraBoom();
-	}
+	
 }
 
 void AMainGameController::SetupInputComponent()
@@ -126,11 +105,11 @@ void AMainGameController::OnSetDestinationReleased()
 
 void AMainGameController::OnWheelRolledUp()
 {
-	ExpectedSpringArmLength = FMath::Clamp<float>(ExpectedSpringArmLength - 150.0f, 150.0f, 800.0f);	
+	MainCharacter->OnWheelRollUp();
 }
 
 void AMainGameController::OnWheelRolledDown()
 {
-	ExpectedSpringArmLength = FMath::Clamp<float>(ExpectedSpringArmLength + 150.0f, 150.0f, 800.0f);
+	MainCharacter->OnWheelRollDown();
 }
 

@@ -52,6 +52,9 @@ AMainCharacter::AMainCharacter()
 	{
 		MainController->MainCharacter = this;
 	}
+	
+	//ƒ´∏ﬁ∂Û ¡‹ ¡§µµ
+	ExpectedSpringArmLength = 800.f;
 }
 
 
@@ -59,7 +62,22 @@ AMainCharacter::AMainCharacter()
 void AMainCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	if (CameraBoom)
+	{
+		if (FMath::Abs(CameraBoom->TargetArmLength - ExpectedSpringArmLength) > KINDA_SMALL_NUMBER) { CameraBoom->TargetArmLength = FMath::Lerp(CameraBoom->TargetArmLength, ExpectedSpringArmLength, 0.05f); }
+	}
+}
 
+//∏∂øÏΩ∫ »Ÿ ø√∏Æ±‚ (¡‹ ¿Œ)
+void AMainCharacter::OnWheelRollUp()
+{
+	ExpectedSpringArmLength = FMath::Clamp<float>(ExpectedSpringArmLength - 150.0f, 150.0f, 800.0f);
+}
+
+//∏∂øÏΩ∫ »Ÿ ≥ª∏Æ±‚ (¡‹ æ∆øÙ)
+void AMainCharacter::OnWheelRollDown()
+{
+	ExpectedSpringArmLength = FMath::Clamp<float>(ExpectedSpringArmLength + 150.0f, 150.0f, 800.0f);
 }
 
 

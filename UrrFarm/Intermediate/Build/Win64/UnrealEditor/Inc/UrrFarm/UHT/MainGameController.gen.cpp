@@ -60,10 +60,6 @@ void EmptyLinkFunctionForGeneratedCodeMainGameController() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_MouseWheelDown_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPtrPropertyParams NewProp_MouseWheelDown;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_ExpectedSpringArmLength_MetaData[];
-#endif
-		static const UECodeGen_Private::FFloatPropertyParams NewProp_ExpectedSpringArmLength;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -157,14 +153,6 @@ void EmptyLinkFunctionForGeneratedCodeMainGameController() {}
 	};
 #endif
 	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_AMainGameController_Statics::NewProp_MouseWheelDown = { "MouseWheelDown", nullptr, (EPropertyFlags)0x0014000000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMainGameController, MouseWheelDown), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMainGameController_Statics::NewProp_MouseWheelDown_MetaData), Z_Construct_UClass_AMainGameController_Statics::NewProp_MouseWheelDown_MetaData) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMainGameController_Statics::NewProp_ExpectedSpringArmLength_MetaData[] = {
-		{ "AllowPrivateAccess", "" },
-		{ "Category", "MainGameController" },
-		{ "ModuleRelativePath", "Public/Controller/MainGameController.h" },
-	};
-#endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMainGameController_Statics::NewProp_ExpectedSpringArmLength = { "ExpectedSpringArmLength", nullptr, (EPropertyFlags)0x0010000000020815, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMainGameController, ExpectedSpringArmLength), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMainGameController_Statics::NewProp_ExpectedSpringArmLength_MetaData), Z_Construct_UClass_AMainGameController_Statics::NewProp_ExpectedSpringArmLength_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMainGameController_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainGameController_Statics::NewProp_ShortPressThreshold,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainGameController_Statics::NewProp_FXCursor,
@@ -173,7 +161,6 @@ void EmptyLinkFunctionForGeneratedCodeMainGameController() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainGameController_Statics::NewProp_SetDestinationClickAction,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainGameController_Statics::NewProp_MouseWheelUp,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainGameController_Statics::NewProp_MouseWheelDown,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainGameController_Statics::NewProp_ExpectedSpringArmLength,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AMainGameController_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AMainGameController>::IsAbstract,
@@ -213,9 +200,9 @@ void EmptyLinkFunctionForGeneratedCodeMainGameController() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProjects_Unreal_KimsFarm_UrrFarm_Source_UrrFarm_Public_Controller_MainGameController_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AMainGameController, AMainGameController::StaticClass, TEXT("AMainGameController"), &Z_Registration_Info_UClass_AMainGameController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMainGameController), 2129038833U) },
+		{ Z_Construct_UClass_AMainGameController, AMainGameController::StaticClass, TEXT("AMainGameController"), &Z_Registration_Info_UClass_AMainGameController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMainGameController), 3978053332U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProjects_Unreal_KimsFarm_UrrFarm_Source_UrrFarm_Public_Controller_MainGameController_h_2704613369(TEXT("/Script/UrrFarm"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProjects_Unreal_KimsFarm_UrrFarm_Source_UrrFarm_Public_Controller_MainGameController_h_3756587190(TEXT("/Script/UrrFarm"),
 		Z_CompiledInDeferFile_FID_UnrealProjects_Unreal_KimsFarm_UrrFarm_Source_UrrFarm_Public_Controller_MainGameController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealProjects_Unreal_KimsFarm_UrrFarm_Source_UrrFarm_Public_Controller_MainGameController_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

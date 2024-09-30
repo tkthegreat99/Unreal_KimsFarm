@@ -22,7 +22,6 @@ class URRFARM_API AMainGameController : public APlayerController
 	
 public:
 	AMainGameController();
-	virtual void Tick(float DeltaTime) override;
 
 	/** Time Threshold to know if it was a short press */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input)
@@ -49,8 +48,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<UInputAction> MouseWheelDown;
 
-	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, meta = (AllowPrivateAccess))
-	float ExpectedSpringArmLength;
 
 protected:
 	/** True if the controlled character should navigate to the mouse cursor. */
@@ -68,8 +65,6 @@ protected:
 	void OnSetDestinationReleased();
 	void OnWheelRolledUp();
 	void OnWheelRolledDown();
-
-	TObjectPtr<USpringArmComponent> CameraBoom;
 
 private:
 	FVector CachedDestination;

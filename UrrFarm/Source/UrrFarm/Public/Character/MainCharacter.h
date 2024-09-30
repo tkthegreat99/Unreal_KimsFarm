@@ -17,11 +17,16 @@ class URRFARM_API AMainCharacter : public ACharacter
 public:
 	// Sets default values for this character's properties
 	AMainCharacter();
-	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	// Called every frame
 
 	FORCEINLINE UCameraComponent* GetTopDownCameraComponent() const { return TopDownCameraComponent; }
 	FORCEINLINE USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
+	void OnWheelRollUp();
+	void OnWheelRollDown();
+
+	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly)
+	float ExpectedSpringArmLength;
 
 
 private:

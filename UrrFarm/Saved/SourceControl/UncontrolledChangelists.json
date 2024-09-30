@@ -5,6 +5,7 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+				"C:/UnrealProjects/Unreal_KimsFarm/UrrFarm/Content/Blueprint/Level/Example.umap",
 				"C:/UnrealProjects/UrrFarm/Content/StarterContent/Architecture/Floor_400x400.uasset",
 				"C:/UnrealProjects/UrrFarm/Content/Blueprint/Level/Example.umap",
 				"C:/UnrealProjects/UrrFarm/Content/Blueprint/Input/IMC_Default.uasset",
