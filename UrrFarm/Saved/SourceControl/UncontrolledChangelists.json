@@ -5,25 +5,7 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"C:/UnrealProjects/Unreal_KimsFarm/UrrFarm/Content/Blueprint/Level/Example.umap",
-				"C:/UnrealProjects/UrrFarm/Content/StarterContent/Architecture/Floor_400x400.uasset",
-				"C:/UnrealProjects/UrrFarm/Content/Blueprint/Level/Example.umap",
-				"C:/UnrealProjects/UrrFarm/Content/Blueprint/Input/IMC_Default.uasset",
-				"C:/UnrealProjects/UrrFarm/Content/Blueprint/Input/InputActions/IA_Click.uasset",
-				"C:/UnrealProjects/UrrFarm/Content/Blueprint/Controller/BP_MainController.uasset",
-				"C:/UnrealProjects/UrrFarm/Content/Blueprint/Character/BP_MainCharacter.uasset",
-				"C:/UnrealProjects/UrrFarm/Content/Blueprint/GameMode/BP_ExampleGameMode.uasset",
-				"C:/UnrealProjects/UrrFarm/Content/Blueprint/Animation/AnimBlueprint/ABP_Farmer.uasset",
-				"C:/UnrealProjects/UrrFarm/Content/Blueprint/Animation/BlendSpace/Farmer_walk.uasset",
-				"C:/UnrealProjects/UrrFarm/Content/Blueprint/Input/InputActions/IA_RolledUp.uasset",
-				"C:/UnrealProjects/UrrFarm/Content/Blueprint/Input/InputActions/IA_RolledDown.uasset",
-				"C:/UnrealProjects/UrrFarm/Content/IMC.uasset",
-				"C:/UnrealProjects/UrrFarm/Content/Maincontroller.uasset",
-				"C:/UnrealProjects/UrrFarm/Content/MainCharacterTest.uasset",
-				"C:/UnrealProjects/UrrFarm/Content/TestGameMode.uasset",
-				"C:/UnrealProjects/UrrFarm/Content/NewInputAction.uasset",
-				"C:/UnrealProjects/UrrFarm/Content/NewMap.umap",
-				"C:/UnrealProjects/UrrFarm/Content/MainCharacter.uasset"
+				"C:/UnrealProjects/Unreal_KimsFarm/UrrFarm/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset"
 			]
 		}
 	]

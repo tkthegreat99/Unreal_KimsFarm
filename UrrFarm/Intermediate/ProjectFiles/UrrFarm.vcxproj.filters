@@ -51,14 +51,32 @@
     <Filter Include="Source\UrrFarm\Private\Character">
       <UniqueIdentifier>{533D43B0-7E5D-30A4-A3D4-1E87ACC66C39}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\UrrFarm\Private\Character\EnemyBase.cpp">
+      <Filter>Source\UrrFarm\Private\Character</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\UrrFarm\Private\Character\MainCharacter.cpp">
       <Filter>Source\UrrFarm\Private\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UrrFarm\Private\Character\PetBase.cpp">
+      <Filter>Source\UrrFarm\Private\Character</Filter>
+    </ClCompile>
+    <Filter Include="Source\UrrFarm\Private\Components">
+      <UniqueIdentifier>{051202CE-96D8-3BCE-9B72-32E5C0D19D6E}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\UrrFarm\Private\Components\CharacterManagementComponent.cpp">
+      <Filter>Source\UrrFarm\Private\Components</Filter>
     </ClCompile>
     <Filter Include="Source\UrrFarm\Private\Controller">
       <UniqueIdentifier>{1F465C08-D645-3A0A-885D-CB72EA90E3D7}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UrrFarm\Private\Controller\MainGameController.cpp">
       <Filter>Source\UrrFarm\Private\Controller</Filter>
+    </ClCompile>
+    <Filter Include="Source\UrrFarm\Private\Resource">
+      <UniqueIdentifier>{91FDE54F-19A8-34C3-A09C-75E058862BFE}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\UrrFarm\Private\Resource\ResourceBase.cpp">
+      <Filter>Source\UrrFarm\Private\Resource</Filter>
     </ClCompile>
     <Filter Include="Source\UrrFarm\Public">
       <UniqueIdentifier>{14B65E14-B5E7-3823-8D8E-337313490C15}</UniqueIdentifier>
@@ -72,14 +90,32 @@
     <Filter Include="Source\UrrFarm\Public\Character">
       <UniqueIdentifier>{BABD46DB-E779-3FD7-9D80-E456B141CFA9}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\UrrFarm\Public\Character\EnemyBase.h">
+      <Filter>Source\UrrFarm\Public\Character</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\UrrFarm\Public\Character\MainCharacter.h">
       <Filter>Source\UrrFarm\Public\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UrrFarm\Public\Character\PetBase.h">
+      <Filter>Source\UrrFarm\Public\Character</Filter>
+    </ClInclude>
+    <Filter Include="Source\UrrFarm\Public\Components">
+      <UniqueIdentifier>{7936E444-264B-3861-AA5D-8E04E8639464}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\UrrFarm\Public\Components\CharacterManagementComponent.h">
+      <Filter>Source\UrrFarm\Public\Components</Filter>
     </ClInclude>
     <Filter Include="Source\UrrFarm\Public\Controller">
       <UniqueIdentifier>{028C2C1F-5637-3414-A854-C69D91B05B75}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\UrrFarm\Public\Controller\MainGameController.h">
       <Filter>Source\UrrFarm\Public\Controller</Filter>
+    </ClInclude>
+    <Filter Include="Source\UrrFarm\Public\Resource">
+      <UniqueIdentifier>{73BAA3B8-38AA-3BF1-A5AD-A7CA3D8CA93E}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\UrrFarm\Public\Resource\ResourceBase.h">
+      <Filter>Source\UrrFarm\Public\Resource</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

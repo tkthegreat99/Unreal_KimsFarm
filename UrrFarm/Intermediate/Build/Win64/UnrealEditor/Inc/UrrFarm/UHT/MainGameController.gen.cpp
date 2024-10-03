@@ -33,6 +33,10 @@ void EmptyLinkFunctionForGeneratedCodeMainGameController() {}
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_MainCharacter_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPtrPropertyParams NewProp_MainCharacter;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_ShortPressThreshold_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_ShortPressThreshold;
@@ -40,10 +44,6 @@ void EmptyLinkFunctionForGeneratedCodeMainGameController() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_FXCursor_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPtrPropertyParams NewProp_FXCursor;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_MainCharacter_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPtrPropertyParams NewProp_MainCharacter;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_DefaultMappingContext_MetaData[];
 #endif
@@ -80,7 +80,15 @@ void EmptyLinkFunctionForGeneratedCodeMainGameController() {}
 	};
 #endif
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMainGameController_Statics::NewProp_MainCharacter_MetaData[] = {
+		{ "Category", "Input" },
+		{ "ModuleRelativePath", "Public/Controller/MainGameController.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_AMainGameController_Statics::NewProp_MainCharacter = { "MainCharacter", nullptr, (EPropertyFlags)0x0014000000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMainGameController, MainCharacter), Z_Construct_UClass_AMainCharacter_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMainGameController_Statics::NewProp_MainCharacter_MetaData), Z_Construct_UClass_AMainGameController_Statics::NewProp_MainCharacter_MetaData) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMainGameController_Statics::NewProp_ShortPressThreshold_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "/** Time Threshold to know if it was a short press */" },
@@ -91,9 +99,10 @@ void EmptyLinkFunctionForGeneratedCodeMainGameController() {}
 #endif
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMainGameController_Statics::NewProp_ShortPressThreshold = { "ShortPressThreshold", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMainGameController, ShortPressThreshold), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMainGameController_Statics::NewProp_ShortPressThreshold_MetaData), Z_Construct_UClass_AMainGameController_Statics::NewProp_ShortPressThreshold_MetaData) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMainGameController_Statics::NewProp_ShortPressThreshold = { "ShortPressThreshold", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMainGameController, ShortPressThreshold), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMainGameController_Statics::NewProp_ShortPressThreshold_MetaData), Z_Construct_UClass_AMainGameController_Statics::NewProp_ShortPressThreshold_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMainGameController_Statics::NewProp_FXCursor_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "/** FX Class that we will spawn when clicking */" },
@@ -104,14 +113,7 @@ void EmptyLinkFunctionForGeneratedCodeMainGameController() {}
 #endif
 	};
 #endif
-	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_AMainGameController_Statics::NewProp_FXCursor = { "FXCursor", nullptr, (EPropertyFlags)0x0014000000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMainGameController, FXCursor), Z_Construct_UClass_UNiagaraSystem_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMainGameController_Statics::NewProp_FXCursor_MetaData), Z_Construct_UClass_AMainGameController_Statics::NewProp_FXCursor_MetaData) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMainGameController_Statics::NewProp_MainCharacter_MetaData[] = {
-		{ "Category", "Input" },
-		{ "ModuleRelativePath", "Public/Controller/MainGameController.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_AMainGameController_Statics::NewProp_MainCharacter = { "MainCharacter", nullptr, (EPropertyFlags)0x0014000000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMainGameController, MainCharacter), Z_Construct_UClass_AMainCharacter_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMainGameController_Statics::NewProp_MainCharacter_MetaData), Z_Construct_UClass_AMainGameController_Statics::NewProp_MainCharacter_MetaData) };
+	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_AMainGameController_Statics::NewProp_FXCursor = { "FXCursor", nullptr, (EPropertyFlags)0x0024080000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMainGameController, FXCursor), Z_Construct_UClass_UNiagaraSystem_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMainGameController_Statics::NewProp_FXCursor_MetaData), Z_Construct_UClass_AMainGameController_Statics::NewProp_FXCursor_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMainGameController_Statics::NewProp_DefaultMappingContext_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -125,7 +127,7 @@ void EmptyLinkFunctionForGeneratedCodeMainGameController() {}
 #endif
 	};
 #endif
-	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_AMainGameController_Statics::NewProp_DefaultMappingContext = { "DefaultMappingContext", nullptr, (EPropertyFlags)0x0014000000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMainGameController, DefaultMappingContext), Z_Construct_UClass_UInputMappingContext_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMainGameController_Statics::NewProp_DefaultMappingContext_MetaData), Z_Construct_UClass_AMainGameController_Statics::NewProp_DefaultMappingContext_MetaData) };
+	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_AMainGameController_Statics::NewProp_DefaultMappingContext = { "DefaultMappingContext", nullptr, (EPropertyFlags)0x0024080000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMainGameController, DefaultMappingContext), Z_Construct_UClass_UInputMappingContext_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMainGameController_Statics::NewProp_DefaultMappingContext_MetaData), Z_Construct_UClass_AMainGameController_Statics::NewProp_DefaultMappingContext_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMainGameController_Statics::NewProp_SetDestinationClickAction_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -136,7 +138,7 @@ void EmptyLinkFunctionForGeneratedCodeMainGameController() {}
 		{ "ModuleRelativePath", "Public/Controller/MainGameController.h" },
 	};
 #endif
-	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_AMainGameController_Statics::NewProp_SetDestinationClickAction = { "SetDestinationClickAction", nullptr, (EPropertyFlags)0x0014000000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMainGameController, SetDestinationClickAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMainGameController_Statics::NewProp_SetDestinationClickAction_MetaData), Z_Construct_UClass_AMainGameController_Statics::NewProp_SetDestinationClickAction_MetaData) };
+	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_AMainGameController_Statics::NewProp_SetDestinationClickAction = { "SetDestinationClickAction", nullptr, (EPropertyFlags)0x0024080000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMainGameController, SetDestinationClickAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMainGameController_Statics::NewProp_SetDestinationClickAction_MetaData), Z_Construct_UClass_AMainGameController_Statics::NewProp_SetDestinationClickAction_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMainGameController_Statics::NewProp_MouseWheelUp_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -144,7 +146,7 @@ void EmptyLinkFunctionForGeneratedCodeMainGameController() {}
 		{ "ModuleRelativePath", "Public/Controller/MainGameController.h" },
 	};
 #endif
-	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_AMainGameController_Statics::NewProp_MouseWheelUp = { "MouseWheelUp", nullptr, (EPropertyFlags)0x0014000000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMainGameController, MouseWheelUp), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMainGameController_Statics::NewProp_MouseWheelUp_MetaData), Z_Construct_UClass_AMainGameController_Statics::NewProp_MouseWheelUp_MetaData) };
+	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_AMainGameController_Statics::NewProp_MouseWheelUp = { "MouseWheelUp", nullptr, (EPropertyFlags)0x0024080000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMainGameController, MouseWheelUp), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMainGameController_Statics::NewProp_MouseWheelUp_MetaData), Z_Construct_UClass_AMainGameController_Statics::NewProp_MouseWheelUp_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMainGameController_Statics::NewProp_MouseWheelDown_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -152,11 +154,11 @@ void EmptyLinkFunctionForGeneratedCodeMainGameController() {}
 		{ "ModuleRelativePath", "Public/Controller/MainGameController.h" },
 	};
 #endif
-	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_AMainGameController_Statics::NewProp_MouseWheelDown = { "MouseWheelDown", nullptr, (EPropertyFlags)0x0014000000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMainGameController, MouseWheelDown), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMainGameController_Statics::NewProp_MouseWheelDown_MetaData), Z_Construct_UClass_AMainGameController_Statics::NewProp_MouseWheelDown_MetaData) };
+	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_AMainGameController_Statics::NewProp_MouseWheelDown = { "MouseWheelDown", nullptr, (EPropertyFlags)0x0024080000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMainGameController, MouseWheelDown), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMainGameController_Statics::NewProp_MouseWheelDown_MetaData), Z_Construct_UClass_AMainGameController_Statics::NewProp_MouseWheelDown_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMainGameController_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainGameController_Statics::NewProp_MainCharacter,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainGameController_Statics::NewProp_ShortPressThreshold,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainGameController_Statics::NewProp_FXCursor,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainGameController_Statics::NewProp_MainCharacter,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainGameController_Statics::NewProp_DefaultMappingContext,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainGameController_Statics::NewProp_SetDestinationClickAction,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainGameController_Statics::NewProp_MouseWheelUp,
@@ -200,9 +202,9 @@ void EmptyLinkFunctionForGeneratedCodeMainGameController() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProjects_Unreal_KimsFarm_UrrFarm_Source_UrrFarm_Public_Controller_MainGameController_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AMainGameController, AMainGameController::StaticClass, TEXT("AMainGameController"), &Z_Registration_Info_UClass_AMainGameController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMainGameController), 3978053332U) },
+		{ Z_Construct_UClass_AMainGameController, AMainGameController::StaticClass, TEXT("AMainGameController"), &Z_Registration_Info_UClass_AMainGameController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMainGameController), 86448903U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProjects_Unreal_KimsFarm_UrrFarm_Source_UrrFarm_Public_Controller_MainGameController_h_3756587190(TEXT("/Script/UrrFarm"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProjects_Unreal_KimsFarm_UrrFarm_Source_UrrFarm_Public_Controller_MainGameController_h_1950389643(TEXT("/Script/UrrFarm"),
 		Z_CompiledInDeferFile_FID_UnrealProjects_Unreal_KimsFarm_UrrFarm_Source_UrrFarm_Public_Controller_MainGameController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealProjects_Unreal_KimsFarm_UrrFarm_Source_UrrFarm_Public_Controller_MainGameController_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

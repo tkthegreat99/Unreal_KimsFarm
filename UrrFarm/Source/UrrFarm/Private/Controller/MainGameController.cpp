@@ -19,7 +19,7 @@ AMainGameController::AMainGameController()
 	DefaultMouseCursor = EMouseCursor::Default;
 	CachedDestination = FVector::ZeroVector;
 	FollowTime = 0.f;
-	ShortPressThreshold = 0.3f;
+	ShortPressThreshold = 0.0f;
 	MainCharacter = Cast<AMainCharacter>(GetPawn());
 }
 
@@ -27,7 +27,6 @@ void AMainGameController::BeginPlay()
 {
 	Super::BeginPlay();
 
-	//Add Input Mapping Context
 	if (UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(GetLocalPlayer()))
 	{
 		Subsystem->AddMappingContext(DefaultMappingContext, 0);
@@ -39,10 +38,8 @@ void AMainGameController::SetupInputComponent()
 {
 	Super::SetupInputComponent();
 
-	// Set up action bindings
 	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(InputComponent))
 	{
-		// Setup mouse input events
 		EnhancedInputComponent->BindAction(SetDestinationClickAction, ETriggerEvent::Started, this, &AMainGameController::OnInputStarted);
 		EnhancedInputComponent->BindAction(SetDestinationClickAction, ETriggerEvent::Triggered, this, &AMainGameController::OnSetDestinationTriggered);
 		EnhancedInputComponent->BindAction(SetDestinationClickAction, ETriggerEvent::Completed, this, &AMainGameController::OnSetDestinationReleased);
@@ -63,25 +60,20 @@ void AMainGameController::OnSetDestinationTriggered()
 {
 	FollowTime += GetWorld()->GetDeltaSeconds();
 
-	// We look for the location in the world where the player has pressed the input
 	FHitResult Hit;
 	bool bHitSuccessful = false;
-	if (bIsTouch)
-	{
-		bHitSuccessful = GetHitResultUnderFinger(ETouchIndex::Touch1, ECollisionChannel::ECC_Visibility, true, Hit);
-	}
-	else
-	{
-		bHitSuccessful = GetHitResultUnderCursor(ECollisionChannel::ECC_Visibility, true, Hit);
-	}
+	
+	bHitSuccessful = GetHitResultUnderCursor(ECollisionChannel::ECC_Visibility, true, Hit);
+	
 
-	// If we hit a surface, cache the location
+	/* CachedDestination == 마우스로 클릭한 위치*/
 	if (bHitSuccessful)
 	{
+		SetDestination = true;
 		CachedDestination = Hit.Location;
 	}
 
-	// Move towards mouse pointer or touch
+	/* CachedDestination 까지 이동 */
 	APawn* ControlledPawn = GetPawn();
 	if (ControlledPawn != nullptr)
 	{
@@ -92,10 +84,8 @@ void AMainGameController::OnSetDestinationTriggered()
 
 void AMainGameController::OnSetDestinationReleased()
 {
-	// If it was a short press
 	if (FollowTime <= ShortPressThreshold)
 	{
-		// We move there and spawn some particles
 		UAIBlueprintHelperLibrary::SimpleMoveToLocation(this, CachedDestination);
 		UNiagaraFunctionLibrary::SpawnSystemAtLocation(this, FXCursor, CachedDestination, FRotator::ZeroRotator, FVector(1.f, 1.f, 1.f), true, true, ENCPoolMethod::None, true);
 	}

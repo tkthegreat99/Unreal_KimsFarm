@@ -20,19 +20,32 @@ class URRFARM_API AMainGameController : public APlayerController
 {
 	GENERATED_BODY()
 	
+
+protected:
+
+
 public:
 	AMainGameController();
 
-	/** Time Threshold to know if it was a short press */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input)
-	float ShortPressThreshold;
-
-	/** FX Class that we will spawn when clicking */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input)
-	TObjectPtr<UNiagaraSystem> FXCursor;
+	FVector CachedDestination;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input)
 	TObjectPtr<AMainCharacter> MainCharacter;
+	 
+	bool SetDestination;
+
+protected:
+
+
+	/** Time Threshold to know if it was a short press */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	float ShortPressThreshold;
+
+	/** FX Class that we will spawn when clicking */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	TObjectPtr<UNiagaraSystem> FXCursor;
+
+	
 
 	/** MappingContext */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
@@ -53,6 +66,7 @@ protected:
 	/** True if the controlled character should navigate to the mouse cursor. */
 	uint32 bMoveToMouseCursor : 1;
 
+	
 	virtual void SetupInputComponent() override;
 
 	// To add mapping context
@@ -67,8 +81,8 @@ protected:
 	void OnWheelRolledDown();
 
 private:
-	FVector CachedDestination;
+	
 
-	bool bIsTouch; // Is it a touch device
+	
 	float FollowTime; // For how long it has been pressed
 };
