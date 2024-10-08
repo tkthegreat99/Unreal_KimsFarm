@@ -17,6 +17,19 @@ class APetBase;
 class UStaticMeshComponent;
 class AResourceBase;
 class UCharacterManagementComponent;
+class APetAIController;
+
+
+UENUM(BlueprintType)
+enum class ECharacterState : uint8
+{
+	ECS_Idle UMETA(DisplayName = "Idle"),
+	ECS_Moving UMETA(DisplayName = "Moving"),
+	ECS_Attacking UMETA(DisplayName = "Attacking"),
+	ECS_Gathering UMETA(DisplayName = "Gathering"),
+	ECS_Dead UMETA(DisplayName = "Dead")
+};
+
 
 UCLASS()
 class URRFARM_API AMainCharacter : public ACharacter
@@ -30,13 +43,13 @@ public:
 
 public:
 
+	FORCEINLINE ECharacterState GetCurrentCharacterState() { return CharacterState; }
+	void SetCurrentCharacterState(ECharacterState NewState);
+
+
 	//캐릭터가 마우스로 찍은 곳에 왔는지 확인해주는 함수.
 	void CheckCharaceterArrived(FVector TargetDestination);
 
-
-
-	void CommandPetsToAttack(TArray<AEnemyBase*> Enemies);
-	void StopPetAttack();
 
 	//////////////* 컨트롤러 관련 *//////////////////
 
@@ -44,10 +57,9 @@ public:
 	void OnWheelRollDown(); // 줌 아웃
 
 	TObjectPtr<AMainGameController> MainController;
-
+		
 	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly)
 	float ExpectedSpringArmLength; // 줌 정도
-
 
 	
 	// 탐지한 적 배열
@@ -66,13 +78,17 @@ public:
 
 protected:
 
+
+	virtual void BeginPlay() override;
+
 	/// 레이더
 	float ElapsedTime;
-	float OverlapInterval = 1.f;
+	float OverlapInterval = 0.5f;
 	void ActivateRadar(float DeltaTime);
 	void DeactivateRadar();
 	void PerformSphereTrace();
 	void PerformRadarTick(float DeltaTime);
+	
 
 
 private:
@@ -89,6 +105,9 @@ private:
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Radar, meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<UCharacterManagementComponent> Manage;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Radar, meta = (AllowPrivateAccess = "true"))
+	ECharacterState CharacterState;
 
 	bool bIsRadarActive = false;
 

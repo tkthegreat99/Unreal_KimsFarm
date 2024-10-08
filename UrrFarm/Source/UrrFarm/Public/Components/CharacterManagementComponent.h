@@ -10,6 +10,8 @@ class AEnemyBase;
 class AResourceBase;
 class APetBase;
 class AMainCharacter;
+class ACharacter;
+class AAIController;
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
@@ -24,20 +26,30 @@ public:
 
 
 
-	FORCEINLINE void SetCharacterMaxHealth(float Health) { MaxHealth = Health; }
+	UPROPERTY(EditAnywhere)
+	TObjectPtr<ACharacter> ComponentOwner;
+
+	UPROPERTY(EditAnywhere)
+	TObjectPtr<AAIController> AIController;
+
 	FORCEINLINE float GetCharacterCurrentHealth() { return CurrentHealth; }
 
-
+	bool IsDetectedIsNearBy = false;
 protected:
 	virtual void BeginPlay() override;
 
 private:
+
+
 
 	UPROPERTY(EditAnywhere, Category = "Character Stats")
 	float CurrentHealth;
 
 	UPROPERTY(EditAnywhere, Category = "Character Stats")
 	float MaxHealth;
+
+	UPROPERTY(EditAnywhere, Category = "Character Stats")
+	float AttackRange;
 
 	TSet<AEnemyBase*> DetectedEnemies;
 	TSet<AResourceBase*> DetectedResources;

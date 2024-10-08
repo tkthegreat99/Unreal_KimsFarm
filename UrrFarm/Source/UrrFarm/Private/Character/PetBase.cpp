@@ -4,9 +4,11 @@
 #include "Character/PetBase.h"
 #include "Kismet/GameplayStatics.h"
 #include "Character/MainCharacter.h"
-#include "AI/AISystemBase.h"
-#include "AIController.h"
+#include "AI/PetAIController.h"
 #include "Character/EnemyBase.h"
+#include "GameFramework/CharacterMovementComponent.h"
+#include "Components/CharacterManagementComponent.h"
+#include "Animation/AnimMontage.h"
 
 // Sets default values
 APetBase::APetBase()
@@ -14,6 +16,23 @@ APetBase::APetBase()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+    Manage = CreateDefaultSubobject<UCharacterManagementComponent>(TEXT("Manage"));
+
+
+}
+
+void APetBase::BeginAttack()
+{
+    GetCharacterMovement()->SetMovementMode(EMovementMode::MOVE_None);
+    bIsAttacking = true;
+
+
+}
+
+void APetBase::EndAttack()
+{
+    GetCharacterMovement()->SetMovementMode(EMovementMode::MOVE_Walking);
+    bIsAttacking = false;
 }
 
 // Called when the game starts or when spawned
@@ -28,11 +47,21 @@ void APetBase::BeginPlay()
     {
         MainCharacter = Cast<AMainCharacter>(FoundCharacters[0]);  // 첫 번째 메인 캐릭터
     }
-	
+    PetAIController = Cast<APetAIController>(GetController());
+    GetCharacterMovement()->MaxWalkSpeed = PetMoveSpeed;
 }
 
+void APetBase::PostInitializeComponents()
+{
+    Super::PostInitializeComponents();
+    if (Manage)
+    {
+        Manage->ComponentOwner = this;
+    }
+}
 void APetBase::FollowMainCharacter()
 {
+    /*
     FVector MainCharacterLocation = MainCharacter->GetActorLocation();
     FVector PetLocation = GetActorLocation();
     FVector DirectionToMainCharacter = MainCharacterLocation - PetLocation;
@@ -44,10 +73,12 @@ void APetBase::FollowMainCharacter()
         FVector MoveDirection = DirectionToMainCharacter.GetSafeNormal();  // 이동할 방향을 정규화
         AddMovementInput(MoveDirection, 1.0f);  // 메인 캐릭터 방향으로 이동
     }
+    */
 }
 
 void APetBase::WanderAround()
 {
+    /*
     bIsWandering = true;
 
     // 랜덤한 위치로 이동
@@ -68,26 +99,31 @@ void APetBase::MoveToRandomLocation()
 
     // 펫이 이동할 목표 위치로 이동
     MoveToLocation(TargetLocation);
+    */
 }
 
 void APetBase::StopWandering()
 {
+    /*
     bIsWandering = false;
     GetWorld()->GetTimerManager().ClearTimer(WanderTimerHandle);
+    */
 }
 
 void APetBase::MoveToLocation(FVector TargetLocation)
 {
-    AAIController* AIController = Cast<AAIController>(GetController());
+    /*
     if (AIController)
     {
         SmoothRotateToTarget(TargetLocation);
         AIController->MoveToLocation(TargetLocation);
     }
+    */
 }
 
 void APetBase::SmoothRotateToTarget(FVector TargetLocation)
 {
+    /*
     FVector DirectionToTarget = (TargetLocation - GetActorLocation()).GetSafeNormal();
     FRotator TargetRotation = DirectionToTarget.Rotation();
     FRotator CurrentRotation = GetActorRotation();
@@ -95,42 +131,19 @@ void APetBase::SmoothRotateToTarget(FVector TargetLocation)
     // 부드럽게 회전 (인터폴레이션 사용)
     FRotator NewRotation = FMath::RInterpTo(CurrentRotation, TargetRotation, GetWorld()->GetDeltaSeconds(), 5.0f);
     SetActorRotation(NewRotation);
+    */
 }
 
-void APetBase::AttackEnemies(TArray<AEnemyBase*> DetectedEnemies)
-{
-    bEnemyNearby = true;
-    if (DetectedEnemies.Num() > 0)
-    {
-        // 첫 번째 적을 타겟으로 설정 (로직에 따라 랜덤 타겟 지정 가능)
-        AEnemyBase* TargetEnemy = DetectedEnemies[0];
 
-        if (TargetEnemy)
-        {
-            // 타겟을 공격하는 로직 추가 (이동 후 공격)
-            MoveToLocation(TargetEnemy->GetActorLocation());
-            UE_LOG(LogTemp, Warning, TEXT("Pet attacking: %s"), *TargetEnemy->GetName());
-        }
-    }
-}
 
-void APetBase::StopAttacking()
-{
-    bEnemyNearby = false;
-    AAIController* AIController = Cast<AAIController>(GetController());
-    if (AIController)
-    {
-        AIController->StopMovement();
-    }
 
-    UE_LOG(LogTemp, Warning, TEXT("Pet Stopped Attacking"));
-}
 
 // Called every frame
 void APetBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+    /*
     if (MainCharacter)
     {
         FVector MainVelocity = MainCharacter->GetVelocity();
@@ -145,16 +158,20 @@ void APetBase::Tick(float DeltaTime)
         }
         else
         {
-            // 메인 캐릭터가 멈추고 있고 적이 없으면 자율 이동 시작
-             // 적 감지 로직 필요
-            if (!bEnemyNearby && !bIsWandering)
+            if (Manage)
             {
-                WanderAround();
+                if (!Manage->IsDetectedIsNearBy && !bIsWandering)
+                {
+                    WanderAround();
+                }
             }
         }
     }
 
+   */
 }
+
+
 
 
 

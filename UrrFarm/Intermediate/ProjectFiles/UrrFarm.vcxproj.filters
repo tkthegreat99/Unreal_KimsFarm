@@ -42,6 +42,15 @@
     <Filter Include="Source\UrrFarm\Private">
       <UniqueIdentifier>{C8775DC2-2B82-3EC9-ADC6-0679A27E54D1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\UrrFarm\Private\AI">
+      <UniqueIdentifier>{957B3BFA-9C48-381C-8D62-C51B171A7154}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\UrrFarm\Private\AI\BTT_Attack.cpp">
+      <Filter>Source\UrrFarm\Private\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UrrFarm\Private\AI\PetAIController.cpp">
+      <Filter>Source\UrrFarm\Private\AI</Filter>
+    </ClCompile>
     <Filter Include="Source\UrrFarm\Private\Animation">
       <UniqueIdentifier>{ED8078BF-02DA-34D9-B820-FFDBFFD48F45}</UniqueIdentifier>
     </Filter>
@@ -81,6 +90,15 @@
     <Filter Include="Source\UrrFarm\Public">
       <UniqueIdentifier>{14B65E14-B5E7-3823-8D8E-337313490C15}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\UrrFarm\Public\AI">
+      <UniqueIdentifier>{4F2F5443-E584-36EA-A22D-345258E23820}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\UrrFarm\Public\AI\BTT_Attack.h">
+      <Filter>Source\UrrFarm\Public\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UrrFarm\Public\AI\PetAIController.h">
+      <Filter>Source\UrrFarm\Public\AI</Filter>
+    </ClInclude>
     <Filter Include="Source\UrrFarm\Public\Animation">
       <UniqueIdentifier>{5C7267DE-B95A-30B0-BA92-4B164DD367E4}</UniqueIdentifier>
     </Filter>

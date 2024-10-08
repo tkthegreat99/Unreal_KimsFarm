@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\unrealprojects\\unreal_kimsfarm\\urrfarm\\intermediate\\build\\win64\\unrealeditor\\inc\\urrfarm\\uht\\maincharacteraniminstance.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\unrealprojects\\unreal_kimsfarm\\urrfarm\\intermediate\\build\\win64\\x64\\urrfarmeditor\\development\\unrealed\\sharedpch.unrealed.cpp20.h.pch",
+        "Includes": [
+            "c:\\unrealprojects\\unreal_kimsfarm\\urrfarm\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\urrfarm\\definitions.urrfarm.h",
+            "c:\\unrealprojects\\unreal_kimsfarm\\urrfarm\\source\\urrfarm\\public\\animation\\maincharacteraniminstance.h",
+            "c:\\unrealprojects\\unreal_kimsfarm\\urrfarm\\intermediate\\build\\win64\\unrealeditor\\inc\\urrfarm\\uht\\maincharacteraniminstance.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

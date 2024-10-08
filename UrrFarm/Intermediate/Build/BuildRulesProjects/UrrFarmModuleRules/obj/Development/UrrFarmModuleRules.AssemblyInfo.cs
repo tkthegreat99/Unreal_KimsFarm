@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UrrFarmModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa4f96f1a4553834023f1d251f7ee1de36a2b57f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e7b32f0ae49dae7f04027c1c11c2083fc7f4094a")]
 [assembly: System.Reflection.AssemblyProductAttribute("UrrFarmModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UrrFarmModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

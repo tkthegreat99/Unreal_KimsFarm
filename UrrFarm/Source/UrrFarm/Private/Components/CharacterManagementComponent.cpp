@@ -7,6 +7,8 @@
 #include "Resource/ResourceBase.h"
 #include "Character/MainCharacter.h"
 #include "Blueprint/AIBlueprintHelperLibrary.h"
+#include "GameFramework/Character.h"
+#include "AIController.h"
 
 UCharacterManagementComponent::UCharacterManagementComponent()
 {
@@ -19,12 +21,15 @@ UCharacterManagementComponent::UCharacterManagementComponent()
 
 
 
+
+
 void UCharacterManagementComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
 
 	CurrentHealth = MaxHealth;
+    AIController = Cast<AAIController>(ComponentOwner->GetController());
 }
 
 
@@ -36,17 +41,39 @@ void UCharacterManagementComponent::TickComponent(float DeltaTime, ELevelTick Ti
 
 void UCharacterManagementComponent::HandleEnemiesAndResources(TSet<AEnemyBase*>& Enemies, TSet<AResourceBase*>& Resources)
 {
-
-    GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Yellow, FString::Printf(TEXT("Handling Enemies: %d, Resources: %d"), Enemies.Num(), Resources.Num()));
+    IsDetectedIsNearBy = true;
+   
+    //GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Yellow, FString::Printf(TEXT("Handling Enemies: %d, Resources: %d"), Enemies.Num(), Resources.Num()));
     DetectedEnemies = Enemies;
     DetectedResources = Resources;
+    
+   
 
     if (DetectedEnemies.Num() > 0)
     {
         // 적 처리 로직 (전투 시작 등)
-        AEnemyBase* TargetEnemy = *DetectedEnemies.CreateIterator();
+        AEnemyBase* ClosestEnemy = nullptr;
+        float ClosestDistance = FLT_MAX;
+
+        for (AEnemyBase* Enemy : DetectedEnemies)
+        {
+            float Distance = FVector::Dist(ComponentOwner->GetActorLocation(), Enemy->GetActorLocation());
+            if (Distance < ClosestDistance)
+            {
+                ClosestDistance = Distance;
+                ClosestEnemy = Enemy;
+            }
+        }
         //AEnemyBase* TargetEnemy = DetectedEnemies[0];
-        GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Red, TEXT("Handling Enemy"));
+        if (ClosestEnemy)
+        {
+            //GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Yellow, TEXT("Moving to Closest Object"));
+            if (AIController)
+            {
+                UAIBlueprintHelperLibrary::SimpleMoveToLocation(AIController, ClosestEnemy->GetActorLocation());
+            }
+
+        }
 
         // 적 공격 처리 또는 이동
     }
@@ -56,11 +83,10 @@ void UCharacterManagementComponent::HandleEnemiesAndResources(TSet<AEnemyBase*>&
         // 자원 채집 로직
         AResourceBase* TargetResource = *DetectedResources.CreateIterator();
         //AResourceBase* TargetResource = DetectedResources[0];
-        GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Green, TEXT("Handling Resource"));
+       // GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Green, TEXT("Handling Resource"));
 
         // 자원 채집 처리 또는 이동
     }
-    else GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Green, TEXT("Ang"));
+
+
 }
-
-

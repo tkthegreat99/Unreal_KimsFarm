@@ -32,7 +32,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input)
 	TObjectPtr<AMainCharacter> MainCharacter;
 	 
-	bool SetDestination;
+	bool bIsDestinationSetted;
 
 protected:
 

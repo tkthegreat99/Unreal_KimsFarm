@@ -5,7 +5,13 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"C:/UnrealProjects/Unreal_KimsFarm/UrrFarm/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset"
+				"C:/UnrealProjects/Unreal_KimsFarm/UrrFarm/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset",
+				"C:/UnrealProjects/Unreal_KimsFarm/UrrFarm/Content/Blueprint/Level/Example.umap",
+				"C:/UnrealProjects/Unreal_KimsFarm/UrrFarm/Content/Blueprint/Character/BP_Test.uasset",
+				"C:/UnrealProjects/Unreal_KimsFarm/UrrFarm/Content/Blueprint/AI/BT_Pet.uasset",
+				"C:/UnrealProjects/Unreal_KimsFarm/UrrFarm/Content/Blueprint/AI/BB_Pet.uasset",
+				"C:/UnrealProjects/Unreal_KimsFarm/UrrFarm/Content/Blueprint/AI/BP_AIController.uasset",
+				"C:/UnrealProjects/Unreal_KimsFarm/UrrFarm/Content/Blueprint/Enum/ECurrentCharacterState.uasset"
 			]
 		}
 	]

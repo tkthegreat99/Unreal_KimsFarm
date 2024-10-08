@@ -69,7 +69,8 @@ void AMainGameController::OnSetDestinationTriggered()
 	/* CachedDestination == 마우스로 클릭한 위치*/
 	if (bHitSuccessful)
 	{
-		SetDestination = true;
+		bIsDestinationSetted = true;
+		MainCharacter->SetCurrentCharacterState(ECharacterState::ECS_Moving);
 		CachedDestination = Hit.Location;
 	}
 

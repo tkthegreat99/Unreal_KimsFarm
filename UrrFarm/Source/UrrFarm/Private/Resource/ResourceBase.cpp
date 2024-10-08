@@ -5,6 +5,8 @@
 AResourceBase::AResourceBase()
 {
 	PrimaryActorTick.bCanEverTick = false;
+	
+	Tags.Add("Resource");
 
 }
 

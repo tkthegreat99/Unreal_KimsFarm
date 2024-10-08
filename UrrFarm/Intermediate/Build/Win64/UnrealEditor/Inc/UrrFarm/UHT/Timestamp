@@ -1,7 +1,9 @@
-C:\UnrealProjects\Unreal_KimsFarm\UrrFarm\Source\UrrFarm\Public\Character\EnemyBase.h
+C:\UnrealProjects\Unreal_KimsFarm\UrrFarm\Source\UrrFarm\Public\AI\BTT_Attack.h
 C:\UnrealProjects\Unreal_KimsFarm\UrrFarm\Source\UrrFarm\Public\Animation\MainCharacterAnimInstance.h
-C:\UnrealProjects\Unreal_KimsFarm\UrrFarm\Source\UrrFarm\Public\Character\PetBase.h
-C:\UnrealProjects\Unreal_KimsFarm\UrrFarm\Source\UrrFarm\Public\Character\MainCharacter.h
-C:\UnrealProjects\Unreal_KimsFarm\UrrFarm\Source\UrrFarm\Public\Components\CharacterManagementComponent.h
+C:\UnrealProjects\Unreal_KimsFarm\UrrFarm\Source\UrrFarm\Public\AI\PetAIController.h
+C:\UnrealProjects\Unreal_KimsFarm\UrrFarm\Source\UrrFarm\Public\Character\EnemyBase.h
 C:\UnrealProjects\Unreal_KimsFarm\UrrFarm\Source\UrrFarm\Public\Resource\ResourceBase.h
 C:\UnrealProjects\Unreal_KimsFarm\UrrFarm\Source\UrrFarm\Public\Controller\MainGameController.h
+C:\UnrealProjects\Unreal_KimsFarm\UrrFarm\Source\UrrFarm\Public\Character\MainCharacter.h
+C:\UnrealProjects\Unreal_KimsFarm\UrrFarm\Source\UrrFarm\Public\Character\PetBase.h
+C:\UnrealProjects\Unreal_KimsFarm\UrrFarm\Source\UrrFarm\Public\Components\CharacterManagementComponent.h
